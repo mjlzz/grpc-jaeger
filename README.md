@@ -59,6 +59,7 @@ func main() {
 import (
 	"fmt"
 	"os"
+	"net"
 	
 	gtrace "github.com/moxiaomomo/grpc-jaeger"
 	"google.golang.org/grpc"
@@ -92,6 +93,11 @@ func main() {
 Suppose you have already deployed the jaeger server on some node,<br>
 jaeger-agent address: `192.168.1.100:6831`, <br>
 jaeger-ui address: `http://192.168.1.100:16686/`.
+
+```bash
+docker run -d -e COLLECTOR_ZIPKIN_HTTP_PORT=9411 -p 5775:5775/udp -p 6831:6831/udp -p 6832:6832/udp -p 5778:5778  -p 16686:16686 -p 14268:14268  -p 14269:14269   -p 9411:9411 jaegertracing/all-in-one:latest
+```
+![demo](https://blog.csdn.net/shuai_wy/article/details/108804950)
 
 ## 2）run a test
 
