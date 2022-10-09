@@ -116,5 +116,5 @@ ok  	github.com/moxiaomomo/grpc-jaeger	3.004s
 ```
 
 ## 3）get the result from the UI
-Open the url `http://192.168.1.100:16686/`, and search the specified service. Then you should see the result like this as below：
+Open the url `http://192.168.1.100:16686/`(WSL:`http://localhost:16686/`), and search the specified service. Then you should see the result like this as below：
 ![jaegerui](./jaegerui.png)
